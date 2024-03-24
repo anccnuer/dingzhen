@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-image: url("./Pixel_BG.jpg");
+    background-size: auto;
+    font-family: "Microsoft Yahei Light","Microsoft Yahei";
+}
+
+/* -------------top bar---------------- */
+#top {
+    display: flex;
+    justify-content: space-between;
+}
+
+#top #logo {
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 70px;
+    width: auto;
+}
+
+#top #logo img {
+    height: 100%;
+    width: 100%;
+}
+
+#top #about {
+    text-align: center;
+    width: 80px;
+    margin-top: 34px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 3px solid #2b93cf;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* --------------内容主体------------ */
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#content #msg {
+    color: white;
+    margin-top: 30px;
+    font-size: larger;
+}
+
+#content button{
+    width: 100px;
+    background: #eb94d0;
+    border-radius: 10px;
+    border: none;
+    font-family: Arial;
+    color: #fafafa;
+    font-size: 17px;
+    padding: 8px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+#container {
+    width: 90%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    display: none;
+}
+
+#foot {
+    font-size: small;
+    color: rgba(255,255,255,0.5);
+    font-family: sans-serif;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* --------------------------- */
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 70%;
+  }
+  
+  button#closeButton {
+    margin-top: 10px;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+/* ------------图片加载动画---------------- */
+#loading {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #3d56c4;
+    border-top-color: rgba(0, 0, 0, 0.2);
+    border-right-color: rgba(0, 0, 0, 0.2);
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    margin: 1rem;
+    animation: circle infinite 0.75s linear;
+  }
+  
+  @keyframes circle {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+#loading-msg {
+    color: rgba(255, 255, 255, 0.671);
+    font-size: smaller;
+}
