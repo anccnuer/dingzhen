@@ -1,5 +1,4 @@
-import './style.css'
-import './style.css'
+import './style.css';
 const img = document.getElementById("tu");
 const loading = document.getElementById('loading');
 const loadingMsg = document.getElementById('loading-msg');
