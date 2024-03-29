@@ -1,7 +1,12 @@
 # 丁真宇宙
 一个简单的网站，随机返回一眼丁真表情包
-## 运行环境
-php版本不限
+## 打包
+创建.env文件，添加```VITE_API=your_api_domain```
+
+```shell
+pnpm/npm install
+pnpm/npm run build
+```
 
 ## 表情包来源
 https://github.com/SleepyAsh0191/yiyandingzhen
