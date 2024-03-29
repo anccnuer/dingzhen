@@ -8,6 +8,7 @@
     <title>丁真宇宙 | 随机一眼丁真表情包</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" href="icon.png">
+    <script type="module" src="main.js"></script>
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -26,7 +27,7 @@
     </div>
     <div id="content">
         <span id="msg">瞧瞧这次随机到了啥(｀・ω・´)</span>
-        <button onclick="getURL()">换一张</button>
+        <button id="changeBtn">换一张</button>
         <div id="container">
             <div id="loading"></div>
             <div id="loading-msg">正在加载中，坐和放宽</div>
@@ -47,38 +48,6 @@
 
         <button id="closeButton" onclick="myDialog.close()">已了解</button>
     </dialog>
-    <script>
-        const img = document.getElementById("tu");
-        const loading = document.getElementById('loading');
-        const loadingMsg = document.getElementById('loading-msg');
-        img.onload = function () {
-            loading.style.display = 'none';
-            loadingMsg.style.display = 'none';
-            img.style.display = 'block';
-        }
-        window.onload = function () {
-            getURL();
-        }
-
-        async function getURL() {
-            loading.style.display = 'block';
-            loadingMsg.style.display = 'block';
-            img.style.display = 'none';
-            fetch('api.php')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(res => {
-                    img.src = res;
-                })
-                .catch(error => {
-                    console.error('Fetch error:', error);
-                });
-        }
-    </script>
 </body>
 
 </html>
