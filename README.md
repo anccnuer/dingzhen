@@ -1,7 +1,6 @@
 # 丁真宇宙
 一个简单的网站，随机返回一眼丁真表情包
 ## 打包
-创建.env文件，添加```VITE_API=your_api_domain```
 
 ```shell
 pnpm/npm install
