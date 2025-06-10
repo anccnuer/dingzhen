@@ -2,5 +2,5 @@ let urls = ["(1,1)丁真.jpeg", "1%1%丁真.jpeg", "114いいよ丁真.png", "11
 
 export function getRandom() {
   let index = Math.floor(Math.random() * (urls.length+1));
-  return "https://i0.wp.com/raw.githubusercontent.com/SleepyAsh0191/yiyandingzhen/main/"+urls[index];
+  return "https://i1.wp.com/raw.githubusercontent.com/SleepyAsh0191/yiyandingzhen/refs/heads/main/dingzhen/"+urls[index];
 }
